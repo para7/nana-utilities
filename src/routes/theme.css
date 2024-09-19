@@ -1,0 +1,24 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+:root {
+	/* transition setting */
+	/* --theme-transition-colors: background-color 0.3s, color 0.3s;
+	transition: var(--theme-transition-colors); */
+
+	--theme-color-text: var(--gray-12);
+
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+
+	color: var(--theme-color-text);
+	background-color: var(--gray-2);
+}
+
+body {
+	margin: 1rem;
+}
+
+a {
+	color: var(--blue-11);
+}
