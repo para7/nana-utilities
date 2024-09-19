@@ -22,7 +22,7 @@
 		</h1>
 
 		<a class="toplink" href="/about"> about</a>
-		<a class="toplink" href="/"> to top</a>
+		<a class="toplink" href="/">top</a>
 
 		<ThemeButton />
 	</div>

@@ -61,6 +61,10 @@
 <!-- pasteイベントを拾う -->
 <svelte:document on:paste={onpaste} />
 
+<svelte:head>
+	<title>画像形式変換</title>
+</svelte:head>
+
 <div class="container">
 	<p>画像をペーストしてください。(直接 ctrl + v で認識します)</p>
 
@@ -139,7 +143,7 @@
 	}
 
 	img {
-		max-height: 300px;
+		max-height: 200px;
 		/* アスペクト比を元の画像のままで固定する */
 		object-fit: contain;
 	}

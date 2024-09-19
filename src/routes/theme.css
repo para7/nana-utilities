@@ -22,3 +22,7 @@ body {
 a {
 	color: var(--blue-11);
 }
+
+a:visited {
+	color: var(--purple-11);
+}

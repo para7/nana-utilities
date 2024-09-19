@@ -7,6 +7,10 @@
 	$: counts = TextCount(text, { includeBreakLine });
 </script>
 
+<svelte:head>
+	<title>文字数カウント</title>
+</svelte:head>
+
 <h1>Words Count</h1>
 
 <textarea placeholder="☆ここにテキストを入力☆" bind:value={text}></textarea>
