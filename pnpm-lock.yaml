@@ -9,58 +9,58 @@ importers:
   .:
     devDependencies:
       '@sveltejs/adapter-static':
-        specifier: ^3.0.2
+        specifier: 3.0.2
         version: 3.0.2(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.153)(vite@5.2.13))(svelte@5.0.0-next.153)(vite@5.2.13))
       '@sveltejs/kit':
-        specifier: ^2.0.0
+        specifier: 2.5.10
         version: 2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.153)(vite@5.2.13))(svelte@5.0.0-next.153)(vite@5.2.13)
       '@sveltejs/vite-plugin-svelte':
-        specifier: ^3.0.0
+        specifier: 3.1.1
         version: 3.1.1(svelte@5.0.0-next.153)(vite@5.2.13)
       '@types/eslint':
-        specifier: ^8.56.7
+        specifier: 8.56.10
         version: 8.56.10
       eslint:
-        specifier: ^9.0.0
+        specifier: 9.4.0
         version: 9.4.0
       eslint-config-prettier:
-        specifier: ^9.1.0
+        specifier: 9.1.0
         version: 9.1.0(eslint@9.4.0)
       eslint-plugin-svelte:
-        specifier: ^2.36.0
+        specifier: 2.39.3
         version: 2.39.3(eslint@9.4.0)(svelte@5.0.0-next.153)
       globals:
-        specifier: ^15.0.0
+        specifier: 15.4.0
         version: 15.4.0
       prettier:
-        specifier: ^3.1.1
+        specifier: 3.3.2
         version: 3.3.2
       prettier-plugin-svelte:
-        specifier: ^3.1.2
+        specifier: 3.2.4
         version: 3.2.4(prettier@3.3.2)(svelte@5.0.0-next.153)
       svelte:
-        specifier: ^5.0.0-next.1
+        specifier: 5.0.0-next.153
         version: 5.0.0-next.153
       svelte-check:
-        specifier: ^3.6.0
+        specifier: 3.8.0
         version: 3.8.0(postcss-load-config@3.1.4(postcss@8.4.38))(postcss@8.4.38)(svelte@5.0.0-next.153)
       tslib:
-        specifier: ^2.4.1
+        specifier: 2.6.3
         version: 2.6.3
       typescript:
-        specifier: ^5.0.0
+        specifier: 5.4.5
         version: 5.4.5
       typescript-eslint:
-        specifier: ^8.0.0-alpha.20
+        specifier: 8.0.0-alpha.30
         version: 8.0.0-alpha.30(eslint@9.4.0)(typescript@5.4.5)
       vite:
-        specifier: ^5.0.3
+        specifier: 5.2.13
         version: 5.2.13
       vite-plugin-kit-routes:
-        specifier: ^0.6.11
+        specifier: 0.6.11
         version: 0.6.11
       vitest:
-        specifier: ^1.2.0
+        specifier: 1.6.0
         version: 1.6.0
 
 packages:
@@ -982,10 +982,6 @@ packages:
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
-
-  micromatch@4.0.7:
-    resolution: {integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==}
-    engines: {node: '>=8.6'}
 
   micromatch@4.0.8:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
@@ -2242,7 +2238,7 @@ snapshots:
       '@nodelib/fs.walk': 1.2.8
       glob-parent: 5.1.2
       merge2: 1.4.1
-      micromatch: 4.0.7
+      micromatch: 4.0.8
 
   fast-json-stable-stringify@2.1.0: {}
 
@@ -2416,11 +2412,6 @@ snapshots:
   merge-stream@2.0.0: {}
 
   merge2@1.4.1: {}
-
-  micromatch@4.0.7:
-    dependencies:
-      braces: 3.0.3
-      picomatch: 2.3.1
 
   micromatch@4.0.8:
     dependencies:
