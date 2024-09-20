@@ -2,6 +2,7 @@
 	import './theme.css';
 
 	import ThemeButton from '$lib/components/theme-button.svelte';
+	import { PAGES } from '$lib/ROUTES';
 </script>
 
 <div>
@@ -11,8 +12,8 @@
 			<span> @para7</span>
 		</h1>
 
-		<a class="toplink" href="/about"> about</a>
-		<a class="toplink" href="/">top</a>
+		<a class="toplink" href={PAGES['/about']}> about</a>
+		<a class="toplink" href={PAGES['/']}>top</a>
 
 		<ThemeButton />
 	</div>
