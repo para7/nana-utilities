@@ -21,10 +21,10 @@
 		box-shadow: 0.1rem 0.1rem 0.1rem var(--gray-11);
 		/* border-color: var(--gray-8); */
 		border: solid 3px var(--gray-8);
-		transition:
+		/* transition:
 			transform 0.2s,
 			background-color 0.2s,
-			box-shadow 0.2s;
+			box-shadow 0.2s; */
 	}
 
 	button:hover {
