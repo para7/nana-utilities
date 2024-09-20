@@ -1,8 +1,4 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:js-app",
-    "group:allNonMajor",
-    "schedule:monthly"
-  ]
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["config:js-app", "group:allNonMajor", "schedule:monthly"]
 }

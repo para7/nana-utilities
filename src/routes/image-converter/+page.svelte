@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ImageConvert, ImageToCanvas } from '$lib/image-convert.client';
+	import { ImageConvert } from '$lib/image-convert.client';
 	import type { ClipboardEventHandler } from 'svelte/elements';
 
 	let stateText = $state('ペーストされたデータがありません。');

@@ -39,23 +39,23 @@
 <div class="result">
 	<div>
 		<span>【encode】</span>
-		<button>copy</button>
+		<button onclick={copyText(encoded)}>copy</button>
 		{encoded}
 	</div>
 	<div>
 		<span>【decode】</span>
-		<button>copy</button>
+		<button onclick={copyText(decoded)}>copy</button>
 		{decoded}
 	</div>
 	<div class="margin"></div>
 	<div>
 		<span>【encodeComponent】</span>
-		<button>copy</button>
+		<button onclick={copyText(encodedComp)}>copy</button>
 		{encodedComp}
 	</div>
 	<div>
 		<span>【decodeComponent】</span>
-		<button>copy</button>
+		<button onclick={copyText(decodedComp)}>copy</button>
 		{decodedComp}
 	</div>
 </div>

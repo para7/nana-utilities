@@ -9,103 +9,107 @@
  * PAGES
  */
 export const PAGES = {
-  "/": `/`,
-  "/about": `/about`,
-  "/encoder/url": `/encoder/url`,
-  "/formatter/json": `/formatter/json`,
-  "/image-converter": `/image-converter`,
-  "/word-count": `/word-count`
-}
+	'/': `/`,
+	'/about': `/about`,
+	'/encoder/url': `/encoder/url`,
+	'/formatter/json': `/formatter/json`,
+	'/image-converter': `/image-converter`,
+	'/word-count': `/word-count`
+};
 
 /**
  * SERVERS
  */
-export const SERVERS = {
-  
-}
+export const SERVERS = {};
 
 /**
  * ACTIONS
  */
-export const ACTIONS = {
-  
-}
+export const ACTIONS = {};
 
 /**
  * LINKS
  */
-export const LINKS = {
-  
-}
+export const LINKS = {};
 
-type ParamValue = string | number | undefined
+type ParamValue = string | number | undefined;
 
 /**
  * Append search params to a string
  */
-export const appendSp = (sp?: Record<string, ParamValue | ParamValue[]>, prefix: '?' | '&' = '?') => {
-  if (sp === undefined) return ''
+export const appendSp = (
+	sp?: Record<string, ParamValue | ParamValue[]>,
+	prefix: '?' | '&' = '?'
+) => {
+	if (sp === undefined) return '';
 
-  const params = new URLSearchParams()
-  const append = (n: string, v: ParamValue) => {
-    if (v !== undefined) {
-      params.append(n, String(v))
-    }
-  }
+	const params = new URLSearchParams();
+	const append = (n: string, v: ParamValue) => {
+		if (v !== undefined) {
+			params.append(n, String(v));
+		}
+	};
 
-  for (const [name, val] of Object.entries(sp)) {
-    if (Array.isArray(val)) {
-      for (const v of val) {
-        append(name, v)
-      }
-    } else {
-      append(name, val)
-    }
-  }
+	for (const [name, val] of Object.entries(sp)) {
+		if (Array.isArray(val)) {
+			for (const v of val) {
+				append(name, v);
+			}
+		} else {
+			append(name, val);
+		}
+	}
 
-  const formatted = params.toString()
-  if (formatted) {
-    return `${prefix}${formatted}`
-  }
-  return ''
-}
+	const formatted = params.toString();
+	if (formatted) {
+		return `${prefix}${formatted}`;
+	}
+	return '';
+};
 
 /**
  * get the current search params
- * 
+ *
  * Could be use like this:
  * ```
  * route("/cities", { page: 2 }, { ...currentSP() })
  * ```
- */ 
+ */
 export const currentSp = () => {
-  const params = new URLSearchParams(window.location.search)
-  const record: Record<string, string> = {}
-  for (const [key, value] of params.entries()) {
-    record[key] = value
-  }
-  return record
-}
+	const params = new URLSearchParams(window.location.search);
+	const record: Record<string, string> = {};
+	for (const [key, value] of params.entries()) {
+		record[key] = value;
+	}
+	return record;
+};
 
 /**
-* Add this type as a generic of the vite plugin `kitRoutes<KIT_ROUTES>`.
-*
-* Full example:
-* ```ts
-* import type { KIT_ROUTES } from './ROUTES'
-* import { kitRoutes } from 'vite-plugin-kit-routes'
-*
-* kitRoutes<KIT_ROUTES>({
-*  PAGES: {
-*    // here, key of object will be typed!
-*  }
-* })
-* ```
-*/
+ * Add this type as a generic of the vite plugin `kitRoutes<KIT_ROUTES>`.
+ *
+ * Full example:
+ * ```ts
+ * import type { KIT_ROUTES } from './ROUTES'
+ * import { kitRoutes } from 'vite-plugin-kit-routes'
+ *
+ * kitRoutes<KIT_ROUTES>({
+ *  PAGES: {
+ *    // here, key of object will be typed!
+ *  }
+ * })
+ * ```
+ */
 export type KIT_ROUTES = {
-  PAGES: { '/': never, '/about': never, '/encoder/url': never, '/formatter/json': never, '/image-converter': never, '/word-count': never }
-  SERVERS: Record<string, never>
-  ACTIONS: Record<string, never>
-  LINKS: Record<string, never>
-  Params: Record<string, never>
-}
+	PAGES: {
+		'/': never;
+		'/about': never;
+		'/encoder/url': never;
+		'/formatter/json': never;
+		'/image-converter': never;
+		'/word-count': never;
+	};
+	SERVERS: Record<string, never>;
+	ACTIONS: Record<string, never>;
+	LINKS: Record<string, never>;
+	Params: Record<string, never>;
+};
