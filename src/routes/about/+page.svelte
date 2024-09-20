@@ -25,18 +25,36 @@
 
 	<h2>問い合わせ先</h2>
 	<div class="block">
-		<p>このサイトは最小限の機能しか搭載しないので、フォーム等ありません。</p>
 		<p>
 			機能追加のリクエストや不具合報告ありましたら、今は一旦 github の issue へお願いいたします。
 		</p>
 		<p>Pull Requestも歓迎いたします。</p>
 	</div>
 
-	<h2>サイト構成</h2>
-	<ul>
-		<li>frontend: sveltekit</li>
-		<li>hosting: cloudflare</li>
-	</ul>
+	<h2>サイト構成技術</h2>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Category</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>frontend</td>
+				<td>sveltekit ( static adapter )</td>
+			</tr>
+			<tr>
+				<td>styling</td>
+				<td>modern-css-reset, radix-colors</td>
+			</tr>
+			<tr>
+				<td>hosting</td>
+				<td>cloudflare</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
 
 <style>

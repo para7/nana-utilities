@@ -2,16 +2,6 @@
 	import './theme.css';
 
 	import ThemeButton from '$lib/components/theme-button.svelte';
-
-	const onClick = () => {
-		if (document.documentElement.classList.contains('dark')) {
-			document.documentElement.classList.remove('dark');
-			localStorage.setItem('theme', 'light');
-		} else {
-			document.documentElement.classList.add('dark');
-			localStorage.setItem('theme', 'dark');
-		}
-	};
 </script>
 
 <div>
