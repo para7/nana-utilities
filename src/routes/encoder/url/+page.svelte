@@ -1,17 +1,7 @@
 <script lang="ts">
-	let inputData = '';
-
-	const copyText = (text: string) => () => {
-		// if (!result.copyable) {
-		// 	return;
-		// }
-		// feedbackMessage = 'コピーしました！';
-
-		// setTimeout(() => {
-		// 	feedbackMessage = '';
-		// }, 500);
-		navigator.clipboard.writeText(text);
-	};
+	import CopyButton from '$lib/components/copy-button.svelte';
+	let inputData = 'https://mozilla.org/?x=шеллы';
+	// let inputData = '';
 
 	$: encoded = encodeURI(inputData);
 	$: decoded = decodeURI(inputData);
@@ -26,49 +16,44 @@
 <h2>URL Encoder/Decoder</h2>
 
 <textarea placeholder="☆ここにURLを入力☆" bind:value={inputData} rows={6}></textarea>
-<!-- 
-<div>
-	<button onclick={copyText} disabled={!result.copyable}>
-		フォーマットされたJSONをコピーする
-	</button>
-	<span>{feedbackMessage}</span>
-</div> -->
 
 <div class="margin"></div>
 
 <div class="result">
-	<div>
+	<div class="line">
 		<span>【encode】</span>
-		<button onclick={copyText(encoded)}>copy</button>
+		<CopyButton text={encoded} />
 		{encoded}
 	</div>
-	<div>
+	<div class="line">
 		<span>【decode】</span>
-		<button onclick={copyText(decoded)}>copy</button>
+		<CopyButton text={decoded} />
 		{decoded}
 	</div>
 	<div class="margin"></div>
-	<div>
+	<div class="line">
 		<span>【encodeComponent】</span>
-		<button onclick={copyText(encodedComp)}>copy</button>
+		<CopyButton text={encodedComp} />
 		{encodedComp}
 	</div>
-	<div>
+	<div class="line">
 		<span>【decodeComponent】</span>
-		<button onclick={copyText(decodedComp)}>copy</button>
+		<CopyButton text={decodedComp} />
 		{decodedComp}
 	</div>
 </div>
 
 <div class="margin"></div>
 
-<h3>各項目の意味</h3>
+<div class="explain">
+	<h3>各項目の意味</h3>
 
-<h4>URL Encode/Decode</h4>
-<p>http から始まる, 完全な形式のURLを正しく変換する</p>
+	<h4>URL Encode/Decode</h4>
+	<p>http から始まる, 完全な形式のURLを正しく変換する</p>
 
-<h4>URL Component Encode/Decode</h4>
-<p>部分的な箇所をURLエンコード形式にしたいときに利用する</p>
+	<h4>URL Component Encode/Decode</h4>
+	<p>部分的な箇所をURLエンコード形式にしたいときに利用する</p>
+</div>
 
 <!-- {text.length} -->
 
@@ -81,10 +66,26 @@
 
 	.result {
 		background-color: var(--gray-4);
+		/* どんな長さでも改行せず1行に収める */
+		white-space: nowrap;
+		overflow-x: auto;
+		gap: 3rem;
 		/* transition: var(--theme-transition-colors); */
+	}
+
+	.result .line {
+		margin-bottom: 0.2em;
 	}
 
 	.margin {
 		margin-bottom: 1rem;
+	}
+
+	.explain {
+		margin-top: 3em;
+	}
+
+	.explain h4 {
+		margin-top: 0.5em;
 	}
 </style>

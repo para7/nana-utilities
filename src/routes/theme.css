@@ -21,6 +21,7 @@ body {
 
 a {
 	color: var(--blue-11);
+	word-break: break-all;
 }
 
 a:visited {
