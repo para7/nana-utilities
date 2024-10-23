@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { IsDarkMode } from '$lib/features/system/IsDarkMode';
+
 	const onClick = () => {
-		if (document.documentElement.classList.contains('dark')) {
+		if (IsDarkMode()) {
 			document.documentElement.classList.remove('dark');
 			localStorage.setItem('theme', 'light');
 		} else {

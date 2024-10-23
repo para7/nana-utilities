@@ -1,5 +1,11 @@
 .DEFAULT_GOAL := help
 
+dev: node_modules ## start dev server
+	pnpm dev
+
+node_modules: package.json pnpm-lock.yaml
+	pnpm install --frozen-lockfile
+
 check: ## ci check
 	pnpm format
 	pnpm lint

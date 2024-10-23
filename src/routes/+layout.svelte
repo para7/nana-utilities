@@ -4,6 +4,7 @@
 	import ThemeButton from '$lib/components/theme-button.svelte';
 	import { PAGES } from '$lib/ROUTES';
 	import { onNavigate } from '$app/navigation';
+	import GithubIcon from '$lib/components/github-icon.svelte';
 
 	// https://svelte.dev/blog/view-transitions
 	onNavigate((navigation) => {
@@ -26,6 +27,10 @@
 
 		<a class="toplink" href={PAGES['/about']}> about</a>
 		<a class="toplink" href={PAGES['/']}>top</a>
+
+		<a href="https://github.com/para7/nana-utilities" target="_blank" rel="noopener noreferrer">
+			<GithubIcon></GithubIcon>
+		</a>
 
 		<ThemeButton />
 	</div>
