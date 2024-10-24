@@ -1,4 +1,8 @@
-<img class="github-logo" alt="github link" src="assets/images/github-mark.png" />
+<script>
+	import img from '$lib/assets/images/github-mark.png';
+</script>
+
+<img class="github-logo" alt="github link" src={img} />
 
 <style>
 	img {
