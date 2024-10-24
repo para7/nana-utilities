@@ -8,6 +8,7 @@ node_modules: package.json pnpm-lock.yaml
 
 check: ## ci check
 	pnpm format
+	pnpm check
 	pnpm lint
 	pnpm test run
 	pnpm build
