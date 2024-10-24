@@ -26,11 +26,12 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+      # .svelte-kit フォルダを生成するため先にビルド
+      - name: Build
+        run: pnpm build
       - name: Lint
         run: pnpm lint
       - name: Run vitest
         run: pnpm test run
       - name: Svelte check
         run: pnpm check
-      - name: Build
-        run: pnpm build
