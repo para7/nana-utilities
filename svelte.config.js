@@ -19,7 +19,10 @@ const config = {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		})
+		}),
+		paths: {
+			base: '/nana-utilities'
+		}
 	}
 
 	// kit: {

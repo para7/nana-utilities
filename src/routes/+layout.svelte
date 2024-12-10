@@ -21,7 +21,7 @@
 <div>
 	<div class="flex header">
 		<h1>
-			<a href="/"> UTILITIES </a>
+			<a href={PAGES['/']}> UTILITIES </a>
 			<span> @para7</span>
 		</h1>
 

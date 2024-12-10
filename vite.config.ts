@@ -6,7 +6,8 @@ export default defineConfig({
 	plugins: [
 		kitRoutes({
 			generated_file_path: 'src/lib/ROUTES.ts',
-			format: 'object[path]'
+			format: 'object[path]',
+			path_base: true
 		}),
 		sveltekit()
 	],
