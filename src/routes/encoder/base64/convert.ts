@@ -1,9 +1,9 @@
-const base64ToBytes = (base64: string) => {
+const Base64ToBytes = (base64: string) => {
 	const binString = atob(base64);
 	return Uint8Array.from(binString, (m) => m.codePointAt(0));
 };
 
-const bytesToBase64 = (bytes: Uint8Array) => {
+const BytesToBase64 = (bytes: Uint8Array) => {
 	const binString = Array.from(bytes, (byte) => String.fromCodePoint(byte)).join('');
 	return btoa(binString);
 };
@@ -16,10 +16,23 @@ const BytesToString = (bytes: Uint8Array) => {
 	return new TextDecoder().decode(bytes);
 };
 
-export const StringToBase64 = (str: string) => {
-	return bytesToBase64(StringToBytes(str));
+export const StringToBase64 = (str: string): string => {
+	try {
+		return BytesToBase64(StringToBytes(str));
+	} catch {
+		return "can't convert !";
+	}
 };
 
-export const Base64ToString = (base64: string) => {
-	return BytesToString(base64ToBytes(base64));
+type ConvertResult = {
+	text: string;
+	hasError: boolean;
+};
+
+export const Base64ToString = (base64: string): ConvertResult => {
+	try {
+		return { text: BytesToString(Base64ToBytes(base64)), hasError: false };
+	} catch {
+		return { text: "can't convert !", hasError: true };
+	}
 };

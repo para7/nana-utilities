@@ -1,12 +1,8 @@
 <script lang="ts">
 	import CopyButton from '$lib/components/copy-button.svelte';
 	import { Base64ToString, StringToBase64 } from './convert';
-	let inputData = 'YSDEgCDwkICAIOaWhyDwn6aE';
-	// let inputData = 'a Ā 𐀀 文 🦄';
-	// let inputData = '';
-	// inputData を base64 エンコード/デコードする
-	// $: encoded = StringToBase64(inputData);
-	$: encoded = '';
+	let inputData = '';
+	$: encoded = StringToBase64(inputData);
 	$: decoded = Base64ToString(inputData);
 </script>
 
@@ -28,8 +24,8 @@
 	</div>
 	<div class="line">
 		<span>【decode】</span>
-		<CopyButton text={decoded} />
-		{decoded}
+		<CopyButton disabled={decoded.hasError} text={decoded.text} />
+		{decoded.text}
 	</div>
 	<div class="margin"></div>
 </div>
