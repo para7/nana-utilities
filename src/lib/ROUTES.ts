@@ -12,6 +12,7 @@ import { base } from '$app/paths'
 export const PAGES = {
   "/": `${base}/`,
   "/about": `${base}/about`,
+  "/encoder/base64": `${base}/encoder/base64`,
   "/encoder/url": `${base}/encoder/url`,
   "/formatter/json": `${base}/formatter/json`,
   "/image-converter": `${base}/image-converter`,
@@ -104,7 +105,7 @@ export const currentSp = () => {
 * ```
 */
 export type KIT_ROUTES = {
-  PAGES: { '/': never, '/about': never, '/encoder/url': never, '/formatter/json': never, '/image-converter': never, '/word-count': never }
+  PAGES: { '/': never, '/about': never, '/encoder/base64': never, '/encoder/url': never, '/formatter/json': never, '/image-converter': never, '/word-count': never }
   SERVERS: Record<string, never>
   ACTIONS: Record<string, never>
   LINKS: Record<string, never>

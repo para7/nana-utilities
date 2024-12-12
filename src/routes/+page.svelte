@@ -9,7 +9,7 @@
 	<li><a href={PAGES['/formatter/json']}>JSONフォーマット</a></li>
 	<li><div>n進数変換</div></li>
 	<li><a href={PAGES['/encoder/url']}>URLエンコード・デコード</a></li>
-	<li><div>base64 エンコード・デコード</div></li>
+	<li><a href={PAGES['/encoder/base64']}>base64 エンコード・デコード</a></li>
 </ul>
 
 <style>

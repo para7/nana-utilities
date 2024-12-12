@@ -1,7 +1,7 @@
 <script lang="ts">
 	import CopyButton from '$lib/components/copy-button.svelte';
-	let inputData = 'https://mozilla.org/?x=шеллы';
-	// let inputData = '';
+	// let inputData = 'https://mozilla.org/?x=шеллы';
+	let inputData = '';
 
 	$: encoded = encodeURI(inputData);
 	$: decoded = decodeURI(inputData);
