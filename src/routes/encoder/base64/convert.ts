@@ -1,6 +1,10 @@
 const Base64ToBytes = (base64: string) => {
 	const binString = atob(base64);
-	return Uint8Array.from(binString, (m) => m.codePointAt(0));
+	return Uint8Array.from(binString, (m) => {
+		const res = m.codePointAt(0);
+		if (res === undefined) throw new Error('codePointAt failed');
+		return res;
+	});
 };
 
 const BytesToBase64 = (bytes: Uint8Array) => {
