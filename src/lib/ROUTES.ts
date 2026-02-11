@@ -16,6 +16,7 @@ export const PAGES = {
   "/encoder/url": `${base}/encoder/url`,
   "/formatter/json": `${base}/formatter/json`,
   "/image-converter": `${base}/image-converter`,
+  "/uuid-generator": `${base}/uuid-generator`,
   "/word-count": `${base}/word-count`
 }
 
@@ -94,7 +95,7 @@ export const currentSp = () => {
 *
 * Full example:
 * ```ts
-* import type { KIT_ROUTES } from './ROUTES'
+* import type { KIT_ROUTES } from '$_lib/ROUTES'
 * import { kitRoutes } from 'vite-plugin-kit-routes'
 *
 * kitRoutes<KIT_ROUTES>({
@@ -105,7 +106,7 @@ export const currentSp = () => {
 * ```
 */
 export type KIT_ROUTES = {
-  PAGES: { '/': never, '/about': never, '/encoder/base64': never, '/encoder/url': never, '/formatter/json': never, '/image-converter': never, '/word-count': never }
+  PAGES: { '/': never, '/about': never, '/encoder/base64': never, '/encoder/url': never, '/formatter/json': never, '/image-converter': never, '/uuid-generator': never, '/word-count': never }
   SERVERS: Record<string, never>
   ACTIONS: Record<string, never>
   LINKS: Record<string, never>
